@@ -1,9 +1,10 @@
+import os
 import discord
 import asyncio
 from discord.utils import get
 
 
-TOKEN = ""
+TOKEN = os.environ["TOKEN"]
 
 client = discord.Client()  
 
@@ -40,5 +41,7 @@ async def on_member_join(member):
                 await bot_message.edit(content="ご協力ありがとうございます")
                 await asyncio.sleep(10)
                 await bot_message.delete()
+
+print("running bot...")
 
 client.run(TOKEN)
