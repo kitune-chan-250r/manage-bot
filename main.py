@@ -16,10 +16,10 @@ async def on_member_join(member):
     channel = client.get_channel(594745608674476041) #welcome
     bot_message = await channel.send("テスト\naho ok? plz push any button")
     #aho yes
-    await bot_message.add_reaction("😎")#client.get_emoji(614753778888867870)
+    await bot_message.add_reaction(":Yes:615111453996875776")#client.get_emoji(614753778888867870)
     #await bot_message.add_reaction(client.get_emoji(612981509250351134))#client.get_emoji(612981509250351134)
     #aho no
-    await bot_message.add_reaction("😰")#client.get_emoji(614753822530600960)
+    await bot_message.add_reaction(":No:615111447411818506")#client.get_emoji(614753822530600960)
     #await bot_message.add_reaction(client.get_emoji(612981535917867037))#client.get_emoji(612981535917867037)
 
     @client.event
@@ -31,10 +31,10 @@ async def on_member_join(member):
             temp_content = bot_message.content
 
             if member == usr: 
-                if str(payload.emoji.name) == "😎":
+                if str(payload.emoji.name) == ":Yes:615111453996875776":
                     role = guild.get_role(612974503953301535)
                      #aho ok 612974503953301535 ng 612986991289827328
-                elif str(payload.emoji.name) == "😰":
+                elif str(payload.emoji.name) == ":No:615111447411818506":
                     role = guild.get_role(612986991289827328)
 
                 await usr.add_roles(role)
