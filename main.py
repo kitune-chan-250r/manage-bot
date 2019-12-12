@@ -32,10 +32,10 @@ async def on_member_join(member):
 
             if member == usr: 
                 print(str(payload.emoji.name))
-                if str(payload.emoji.name) == ":Yes:":
+                if str(payload.emoji.name) == "Yes":
                     role = guild.get_role(612974503953301535)
                      #aho ok 612974503953301535 ng 612986991289827328
-                elif str(payload.emoji.name) == ":No:":
+                elif str(payload.emoji.name) == "No":
                     role = guild.get_role(612986991289827328)
 
                 await usr.add_roles(role)
