@@ -31,10 +31,11 @@ async def on_member_join(member):
             temp_content = bot_message.content
 
             if member == usr: 
-                if str(payload.emoji.name) == ":Yes:615111453996875776":
+                print(str(payload.emoji.name))
+                if str(payload.emoji.name) == ":Yes:":
                     role = guild.get_role(612974503953301535)
                      #aho ok 612974503953301535 ng 612986991289827328
-                elif str(payload.emoji.name) == ":No:615111447411818506":
+                elif str(payload.emoji.name) == ":No:":
                     role = guild.get_role(612986991289827328)
 
                 await usr.add_roles(role)
