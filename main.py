@@ -104,9 +104,9 @@ async def on_message(message):
             elif d[6] == 'cet':
                 utc = utc - td(hours = 1)
             elif d[6] == 'est':
-                utc = utc - td(hours = -4)
+                utc = utc - td(hours = -5)
             elif d[6] == 'pst':
-                utc = utc - td(hours = -7)
+                utc = utc - td(hours = -8)
             else:
                 await message.channel.send("wrong time zone!")
                 suc = 0
@@ -117,7 +117,7 @@ async def on_message(message):
         if suc:    
             area = ['Japan(JST) is','Europe(CET) is','East America(EST) is','West America(PST) is']
             timezones = zone_decide(utc)
-            content = 'Let me convert the input datetime'
+            content = 'Let me convert the input datetime \n'
             for a,t in zip(area,timezones):
                 content = content + a + t.strftime("%Y/%m/%d %H:%M") + "!　" + what(t) + "\n"
             await message.channel.send(content)
